@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LibPost from '../lib/LibPost';
+
+export type Post = {
+  id: number;
+  title: string;
+  content: string;
+};
+
+const data = await LibPost.getList();
+console.log(data);
+const posts: Post[] = data.items;
+---
+
+<Layout title="Welcome to Astro.">
+	<h1>Post一覧</h1>
+	<hr />
+	<ul>
+	  {
+		posts.map((post) => (
+		  <li>
+			<a href={`/posts/${post.id}`}>{post.title}</a>
+		  </li>
+		))
+	  }
+	</ul>
+</Layout>
+
+<style>
+</style>
+
+
+<!--
+const posts: Post[] = [
+	{id: 1, title: "title_1", content: "b1"},
+	{id: 2, title: "title_2", content: "b2"},
+	{id: 3, title: "title_3", content: "b3"},
+];
+ -->
