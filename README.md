@@ -6,7 +6,7 @@
 
  date    : 2023/02/02 
 
- update  : 2023/02/03
+ update  : 2023/02/04
 
 ***
 ### Summary
@@ -48,8 +48,9 @@ yarn build
 ```
 
 ***
-### related
+### blog
 
+https://zenn.dev/knaka0209/articles/ecbc3f80cfcf7c
 
 ***
 
